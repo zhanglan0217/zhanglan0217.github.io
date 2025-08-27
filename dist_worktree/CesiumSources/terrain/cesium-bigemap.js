@@ -9,7 +9,8 @@
     z.Resource.call(this, i), (this._bmEndpoint = e), (this._bmEndpointDomain = new z.Uri(e.url).authority), (this._bmEndpointResource = t), (this._bmRoot = void 0), (this._pendingPromise = void 0), (this._credits = void 0);
   }
   (n.accessToken = void 0),
-    (n.URL = 'http://localhost:9000'),
+    // Disable local URL on production Pages
+    (n.URL = ''),
     z.defined(Object.create) && ((o.prototype = Object.create(z.GeographicTilingScheme.prototype)).constructor = o),
     (o.prototype.getNumberOfYTilesAtLevel = function(e) {
       return 1 === this._numberOfLevelZeroTiles ? this._numberOfLevelZeroTilesY << (0 < e ? e - 1 : 0) : this._numberOfLevelZeroTilesY << e;
